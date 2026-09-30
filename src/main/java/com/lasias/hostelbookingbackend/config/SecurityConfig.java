@@ -42,7 +42,10 @@ public class SecurityConfig {
                             "/api/auth/**",
                             "/api/auth/login**",
                             "/oauth2/**",
-                            "/api/user/register"
+                            "/api/user/register",
+                            "/actuator/health",
+                            "/actuator/metrics",
+                            "/actuator/metrics/*"
                     ).permitAll();
 
                     auth.anyRequest().authenticated();
